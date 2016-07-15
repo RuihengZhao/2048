@@ -112,3 +112,11 @@ function noBlockVertical(row1, row2, col, board){
 	}
 	return true;
 }
+
+function nomove(board){
+	if( canMoveUp(board) || canMoveDown(board) || 
+		canMoveRight(board) || canMoveLeft(board) ){
+		return false;
+	}
+	return true;
+}
