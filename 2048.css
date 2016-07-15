@@ -57,3 +57,11 @@ header p{
 	position:absolute;
 }
 
+.number_cell{
+	border-radius: 6px;
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 100px;
+	text-align: center;
+	position: absolute;
+}
