@@ -87,6 +87,73 @@ function generateOneNumber(){
 	}
 }
 
+
+$(document).keydown(function(event){
+	switch(event.ketCode){
+		case 37:  // left
+			if( moveLeft()){
+				generateOneNumber();
+				isgameover();
+			}
+			break;
+		case 38:break;  // up
+			if( moveUp()){
+				generateOneNumber();
+				isgameover();
+			}
+			break;
+		case 39:break;  // right
+			if( moveRight()){
+				generateOneNumber();
+				isgameover();
+			}
+			break;
+		case 40:break;  // down
+			if( moveDown()){
+				generateOneNumber();
+				isgameover();
+			}
+			break;
+		default:break;  //  other key
+	}
+})
+
+function isgameover(){}
+
+function moveLeft(){
+	if(!canMoveLeft(board)){
+		return false
+	}else{
+		for (var i = 0; i < 4; i++) {
+			for(var j = 1; j < 4; j++) {
+				if(board[i][j] != 0){
+					for(var k = 0; k < j; k++){
+						if(board[i][k] == 0 && noBlockHorizontal(i, k, j, board)){
+							// You can move left
+							showMoveAnimation(i, j, i, k);
+
+							board[i][k] = board[i][j];
+							board[i][j] = 0;
+							continue;
+						}else if(board[i][k] == board[i][j] && noBlockHorizontal(i, k, j, board)){
+							//  You can move left and add two cell together
+							showMoveAnimation(i, j, i, k);
+
+							board[i][k] += board[i][j];
+							board[i][j] = 0;
+							continue;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	updateBoardView();
+	return true;
+}
+
+
 /*
 	for (var i = 0; i < 4; i++) {
 		for(var j = 0; j < 4; j++) {
