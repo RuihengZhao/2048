@@ -1,2 +1,4 @@
 # 2048
-# A popular web game.
+# A Popular Web Game.
+# You can play with ↑ ↓ ← →
+# Have fun!!! Get 20148!!!
