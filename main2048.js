@@ -256,9 +256,9 @@ function moveRight(){
 		return false
 	}else{
 		for (var i = 0; i < 4; i++) {
-			for(var j = 0; j < 3; j++) {
+			for(var j = 2; j >= 0; j--){
 				if(board[i][j] != 0){
-					for(var k = j+1; k < 4; k++){
+					for(var k = 3; k > j; k--){
 						if(board[i][k] == 0 && noBlockHorizontal(i, j, k, board)){
 							// You can move left
 							showMoveAnimation(i, j, i, k);
@@ -294,8 +294,8 @@ function moveUp(){
 	if(!canMoveUp(board)){
 		return false
 	}else{
-		for (var i = 1; i < 4; i++) {
-			for(var j = 0; j < 4; j++) {
+		for(var j = 0; j < 4; j++) {
+			for (var i = 1; i < 4; i++) {
 				if(board[i][j] != 0){
 					for(var k = 0; k < i; k++){
 						if(board[k][j] == 0 && noBlockVertical(k, i, j, board)){
@@ -333,10 +333,10 @@ function moveDown(){
 	if(!canMoveDown(board)){
 		return false
 	}else{
-		for (var i = 0; i < 3; i++) {
-			for(var j = 0; j < 4; j++) {
+		for(var j = 0; j < 4; j++) {
+			for (var i = 2; i >= 0; i--) {
 				if(board[i][j] != 0){
-					for(var k = i+1; k < 4; k++){
+					for(var k = 3; k > i; k--){
 						if(board[k][j] == 0 && noBlockVertical(i, k, j, board)){
 							// You can move left
 							showMoveAnimation(i, j, k, j);
