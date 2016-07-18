@@ -90,7 +90,7 @@ function updateBoardView(){
 	}
 
 	$('.number_cell').css('line-height', cellSideLength+'px');
-	$('.number_cell').css('font-size', 0.6*cellSideLength+'px');
+	$('.number_cell').css('font-size', 0.4*cellSideLength+'px');
 }
 
 function generateOneNumber(){
