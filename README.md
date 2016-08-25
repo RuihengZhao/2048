@@ -1,7 +1,5 @@
-# 2048
-A Popular Web Game.
-You can play with ↑ ↓ ← → and you can also play it on your mobile devices.
-Have fun!!! Get 2048!!!
-#
-#
-*** Only for Learning Purposes***
+# Play [2048](https://ruihengzhao.github.io/2048/index.html)!
+
+HOW TO PLAY: Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!
+
+A clone made by Ruiheng Zhao. Just for learning purposes.
